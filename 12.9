@@ -1,0 +1,16 @@
+parts = input().split()
+name = parts[0]
+while name != '-1':
+    # try block for exception handling
+    try:
+        #this line throw ValueError if parts[1] is not convertible into int
+        age = int(parts[1]) + 1
+    #if ValueError raised then except it
+    except ValueError:
+        # if ValueError then assigning 0 into age
+        age = 0
+    # printing name and age
+    print('{} {}'.format(name,age))
+    # get next line
+    parts = input().split()
+    name = parts[0]
